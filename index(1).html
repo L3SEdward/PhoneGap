@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        
+        <!-- Enables or Disables the automatic detection of phone numbers in HTML -->
+        <meta name="format-detection" content="telephone=no" />
+        
+        <!-- Make the app scale to take up the entire screen -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, 
+              maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, 
+              target-densitydpi=device-dpi">
+        
+        <!-- Load cordova stylesheet and jquery stylesheet -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="js/libs/jquery-mobile/jquery.mobile.min.css"/>
+        
+        <!-- Load jquery and jquery mobile javascript -->
+        <script type="text/javascript" src="js/libs/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="js/libs/jquery-mobile/jquery.mobile.min.js"></script>
+        
+        <title>Fitness</title>
+    </head>
+    <body>
+        <div data-dom-cache="false" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1 id="header">Distance</h1>
+                <a data-role="button" class="ui-btn-right" onclick="showAbout()">About</a>
+            </div>
+            
+            <div data-role="content" style="padding:0;">
+                <h3 id="position1">Position 1: Not Set</h3><br/>
+                <h3 id="position2">Position 2: Not Set</h3><br/>
+                <h3 id="fitnessData"></h3><br/>
+                <a data-role="button" onclick="getPos1()">Set Position 1</a><br/><br/>
+                <a data-role="button" onclick="getPos2()">Set Position 2</a><br/><br/>
+                <a data-role="button" onclick="computeDistance()">Compute Distance</a><br/><br/>
+            </div>
+         
+            <div data-role="footer" data-theme="b" data-position="fixed" >
+                <h4>Geolocation Example App</h4>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
